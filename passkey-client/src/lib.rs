@@ -48,6 +48,7 @@ mod tests;
 #[cfg_attr(feature = "typeshare", typeshare)]
 #[derive(Debug, serde::Serialize, PartialEq, Eq)]
 #[serde(tag = "type", content = "content")]
+#[non_exhaustive]
 /// Errors produced by Webauthn Operations.
 pub enum WebauthnError {
     /// A credential ID can be a maximum of 1023 bytes.
